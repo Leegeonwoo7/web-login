@@ -37,7 +37,7 @@
     memberDTO.setPwd(pwd);
 
     MemberDAO memberDAO = MemberDAO.getInstance();
-    int su = memberDAO.write(memberDTO);
+    boolean su = memberDAO.write(memberDTO);
 %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -45,7 +45,7 @@
     <title>Title</title>
 </head>
 <body>
-    <%if(su == 1){ %>
+    <%if(su){ %>
         회원가입을 축하합니다.
 <%} else {%>
     회원가입 실패하였습니다. <br>
