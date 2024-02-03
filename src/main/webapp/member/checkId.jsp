@@ -15,7 +15,7 @@
 %>
 <html>
 <head>
-    <title>Title</title>
+    <title>중복체크</title>
 </head>
 <body>
     <%if(exist){ %>
@@ -35,7 +35,6 @@
     function checkIdClose(id){
         opener.document.getElementById("id").value = id; //현재열려있는 윈도우 창이아닌 회원가입 form밸류에 삽입
         window.close();
-
         opener.document.getElementById("pwd").focus();
     }
 </script>
