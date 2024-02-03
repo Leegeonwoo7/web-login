@@ -33,7 +33,7 @@
     </style>
 </head>
 <body>
-<form name="form_1" method="post" action="">
+<form name="form_1" method="post" action="member/write.jsp" onsubmit="return validateForm()">
     <table border="1" cellspacing="5">
         <tr>
             <th>이름</th>
@@ -49,7 +49,7 @@
             <th>아이디</th>
             <td>
                 <input type="text" id="id" name="id">
-                <button onclick="checkId(); return false;">중복체크</button>
+                <button onclick="checkId();">중복체크</button>
                 <div class="id_check_message hide">아이디를 입력하세요</div>
 
             </td>
@@ -129,7 +129,7 @@
 
         <tr>
             <td colspan="2" align="center">
-                <input type="button" id="signup" value="회원가입">
+                <input type="button" id="signup" onclick="checkWrite()" value="회원가입">
                 <input type="reset" value="다시작성">
             </td>
         </tr>
